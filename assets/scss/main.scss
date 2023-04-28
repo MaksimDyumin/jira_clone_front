@@ -1,0 +1,49 @@
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('@/assets/imgs/bac2.jpg');
+  background-position: left center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.page-enter-active,
+.page-leave-active,
+.layout-enter-active, 
+.layout-leave-active {
+  transition: opacity .5s
+}
+
+.page-enter,
+.page-leave-active,
+.layout-enter, 
+.layout-leave-active {
+  opacity: 0
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+#__nuxt{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+// @font-face {
+// 	font-family: 'Montserrat';
+// 	src: url('../fonts/Montserrat-VariableFont_wght.ttf');
+// }

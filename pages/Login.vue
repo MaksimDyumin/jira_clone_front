@@ -45,11 +45,6 @@ import InputText from 'primevue/inputtext';
 export default {
   setup() {
     const cookie = useCookie('token')
-    definePageMeta({
-      layout: 'authorization',
-      needAuth: false
-    })
-
     const userStore = useUserStore()
 
     return { cookie, userStore }

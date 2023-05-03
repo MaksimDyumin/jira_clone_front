@@ -8,9 +8,6 @@
 <script>
 export default {
   setup() {
-    definePageMeta({
-      needAuth: false
-    })
   },
   methods:{
     checkInstanse(){

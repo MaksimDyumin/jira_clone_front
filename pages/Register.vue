@@ -55,10 +55,6 @@ import InputText from 'primevue/inputtext';
 
 export default {
   setup() {
-    definePageMeta({
-      layout: 'authorization',
-      needAuth: false
-    })
     const userStore = useUserStore()
     return {userStore}
   },

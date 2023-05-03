@@ -23,9 +23,6 @@ import Image from 'primevue/image';
 
 export default {
   setup() {
-    definePageMeta({
-      needAuth: true
-    })
     const userStore = useUserStore()
     return {userStore}
   },

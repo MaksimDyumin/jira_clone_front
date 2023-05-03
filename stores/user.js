@@ -59,7 +59,6 @@ export const useUserStore = defineStore('user', {
     async fetchProfileUser(){
       const { $api } = useNuxtApp();
       try {
-        console.log('try')
         const response = await $api.get('profile/')
         this.user = response.data
         this.loggedIn = true

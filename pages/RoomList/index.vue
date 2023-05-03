@@ -50,9 +50,6 @@ import { useRoomsStore } from '~/stores/rooms';
 
 export default {
   setup(){
-    definePageMeta({
-      needAuth: true
-    })
     const roomsStore = useRoomsStore()
     return {roomsStore}
   },

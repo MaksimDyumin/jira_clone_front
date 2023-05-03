@@ -35,9 +35,6 @@ import {useDesksStore} from '~/stores/desks'
 
 export default {
   setup() {
-    definePageMeta({
-      needAuth: true
-    })
     const desksStore = useDesksStore()
     return { desksStore }
   },

@@ -3,6 +3,7 @@
     <div class="flex flex-column w-full min-h-full">
       <Header></Header>
       <div class="page-container h-full w-full">
+        <NuxtLoadingIndicator />
         <slot></slot>
       </div>
     </div>

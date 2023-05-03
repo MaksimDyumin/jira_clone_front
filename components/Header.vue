@@ -69,6 +69,7 @@ $third: #D8C3A5;
   text-align: center;
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 
 .p-button.p-button-text:enabled:hover{
@@ -99,7 +100,7 @@ $third: #D8C3A5;
     cursor: pointer;
 
     img{
-      object-fit: cover;
+      object-fit: fill;
       width: 100%;
       height: 100%;
     }

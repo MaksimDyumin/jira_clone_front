@@ -1,5 +1,5 @@
 html, body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif!important;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -38,7 +38,11 @@ html, body {
 #__nuxt{
   display: flex;
   flex-direction: column;
-  height: 100%;
+  min-height: 100%;
+}
+
+.p-component{
+  font-family: 'Montserrat';
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
@@ -47,3 +51,5 @@ html, body {
 // 	font-family: 'Montserrat';
 // 	src: url('../fonts/Montserrat-VariableFont_wght.ttf');
 // }
+
+// #e9ecef интересный цвет для замены белого при темной теме

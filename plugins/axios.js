@@ -9,7 +9,6 @@ export default defineNuxtPlugin((nuxtApp) => {
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
-      // 'Content-Type': 'image/jpeg',
       'Authorization': `Bearer ${accessToken.value}`
     },
   });
@@ -35,7 +34,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     const refreshToken = useCookie('refreshToken')
     const accessToken = useCookie('accessToken')
 
-    if(error.response.statusText === 'Unauthorized' && !config._retry && refreshToken.value){
+    if(error?.response?.statusText === 'Unauthorized' && !config._retry && refreshToken.value){
       config._retry = true;
       
       const response = await axios.post('http://127.0.0.1:8000/api/v1/token/refresh/', {refresh: refreshToken.value},  
@@ -46,7 +45,8 @@ export default defineNuxtPlugin((nuxtApp) => {
         }
       })
       
-      if (response.statusText === 'OK') {
+      
+      if (response?.statusText === 'OK') {
         accessToken.value = response.data.access
         refreshToken.value = response.data.refresh
   

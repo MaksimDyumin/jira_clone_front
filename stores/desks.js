@@ -25,5 +25,16 @@ export const useDesksStore = defineStore('desks', {
         return false
       }
     },
+
+    async createDesk() {
+      const { $api } = useNuxtApp();
+      try {
+        const response = await $api.get('profile/rooms/desks')
+        this.roomsPreview = response.data
+        return true
+      } catch (error) {
+        return false
+      }
+    },
   }
 })

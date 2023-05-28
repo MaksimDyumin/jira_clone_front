@@ -55,6 +55,15 @@ export default <RouterConfig> {
       }
     },//component: () => import('~/pages/RoomList/RoomDetail.vue').then(r => r.default || r),
     {
+      name: 'roomEdit',
+      path: '/RoomList/:id/edit',
+      component: () => import('~/pages/RoomList/Edit.vue').then(r => r.default || r),
+      meta:{
+        layout: 'default',
+        needAuth: true,
+      }
+    },//component: () => import('~/pages/RoomList/RoomDetail.vue').then(r => r.default || r),
+    {
       name: 'desks',
       path: '/RoomList/:roomId/desks/:deskId',
       component: () => import('~/pages/desks/[id].vue').then(r => r.default || r),

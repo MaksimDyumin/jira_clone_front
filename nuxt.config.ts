@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     "assets/scss/main.scss",
   ],
   modules:[
+    '@/modules/ngrok/index.js',
     '@pinia/nuxt',
   ],
   pinia: {
@@ -31,11 +32,11 @@ export default defineNuxtConfig({
     ],
   },
   build: {
-		transpile: ["primevue"]
+		transpile: ["primevue"],
+    
 	},
   plugins:[
     'plugins/primevue.js',
     'plugins/axios.js',
   ],
-  
 })

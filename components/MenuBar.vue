@@ -1,6 +1,6 @@
 <template>
   <div class="menu-container mt-3">
-    <Button @click="$router.go(-1)" class="ml-2" type="button" label="Назад" icon="pi pi-arrow-left" outlined />
+    <Button @click="routeBack" class="ml-2" type="button" label="Назад" icon="pi pi-arrow-left" outlined />
     <slot></slot>
     
   </div>
@@ -9,7 +9,19 @@
 
 <script>
 export default {
-
+  methods:{
+    routeBack(){
+      let arrPath = this.$route.path.split('/')
+      arrPath.pop()
+      if (arrPath.length == 1) {
+        arrPath = '/'
+      }
+      else {
+        arrPath = arrPath.join('/')
+      }
+      this.$router.push({path: arrPath, replace: true})
+    }
+  }
 }
 </script>
 

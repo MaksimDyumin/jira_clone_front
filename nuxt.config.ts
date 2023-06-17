@@ -33,7 +33,6 @@ export default defineNuxtConfig({
   },
   build: {
 		transpile: ["primevue"],
-    
 	},
   plugins:[
     'plugins/primevue.js',

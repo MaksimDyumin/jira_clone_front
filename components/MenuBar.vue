@@ -10,7 +10,7 @@
 <script>
 export default {
   methods:{
-    routeBack(){
+    routeBack(){// Ломает аватиарку если запускать в сеть
       let arrPath = this.$route.path.split('/')
       arrPath.pop()
       if (arrPath.length == 1) {

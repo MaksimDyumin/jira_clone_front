@@ -1,31 +1,32 @@
-import ngrok from 'ngrok'
-import chalk from 'chalk'
+// import ngrok from 'ngrok'
+// import chalk from 'chalk'
+// import { defineNuxtModule } from '@nuxt/kit'
 
-
-export default function (inlineOptions, nuxt) {
-  let url
-
-  if (nuxt.options.dev === false) {
-    return
-  }
-
-  const options = nuxt.options.ngrok || {}
-  const token = process.env.NGROK_TOKEN || options.token
-
-  nuxt.hook('listen', async function (server, { port }) {
-    if(token){
-      await ngrok.authtoken(token)
-    }
-
-    url = await ngrok.connect(port)
-    console.log(url)
-    // nuxt.options.devServer.url = url
-    // nuxt.options.cli.badgeMessages.push(
-    //   `Public URL: ${chalk.underline.yellow(url)}`
-    // )  
-  })
-
-  nuxt.hook('close', function () {
-    url && ngrok.disconnect()
-  })
+export default function(){
+  return
 }
+// export default defineNuxtModule({
+//   setup (options, nuxt) {
+
+//     let url
+//     if (nuxt.options.dev === false) {
+//       return
+//     }
+
+//     // const options = nuxt.options.ngrok || {}
+//     const token = process.env.NGROK_TOKEN || options.token
+
+//     nuxt.hook('listen', async () => {
+//       if(token){
+//         await ngrok.authtoken(token)
+//       }
+//       url = await ngrok.connect(3000)
+//       console.log(url) //4041
+//     })
+
+//     nuxt.hook('close', function () {
+//       url && ngrok.disconnect()
+//     })
+
+//   }
+// })

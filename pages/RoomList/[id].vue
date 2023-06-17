@@ -4,7 +4,8 @@
     <MenuBar>
       <Button @click="visible = true" class="ml-4" type="button" label="Создать доску" icon="pi pi-plus" outlined />
       
-      <Button @click="$router.push(`${$route.params.id}/edit`)" class="ml-4" type="button" label="Редактирование" icon="pi pi-pencil" outlined /> <!--  @click="$router.push(`RoomList/${$router.params}`)" -->
+      <Button @click="$router.push(`${$route.params.id}/edit`)" class="ml-4" type="button" label="Редактирование" icon="pi pi-pencil" outlined />
+      {{ $route.params.id }}
     </MenuBar>
 
     <div class="flex flex-wrap cards-container mt-2">
@@ -12,7 +13,6 @@
         <Card class="cursor-pointer">
           <template #title>
            {{room.title}}
-           
           </template>
         </Card>
       </div>
